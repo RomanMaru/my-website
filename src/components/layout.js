@@ -1,51 +1,64 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React, {useEffect, useRef} from 'react'
+import Navigation from './navigation'
+import Background from '../components/animatedBackground/animatedBackground'
+import { TransitionProvider, TransitionViews } from 'gatsby-plugin-transitions'
+import { FaGithub, FaFacebook, FaTelegram } from 'react-icons/fa'
+import gsap from 'gsap'
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+const Layout = ({ location, children }) => {
+  let social = useRef(null)
 
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  useEffect(() => {
+    gsap.from(social, 2, {
+      delay: 1,
+      opacity: 0,
+      x: -50,
+      ease: "elastic.out(1, 0.3)"
+    })
+  }, [social])
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+    <div className="container">
+      <div ref={el => (social = el)} className="social">
+        <FaGithub />
+        <FaFacebook />
+        <FaTelegram />
       </div>
-    </>
+      <Navigation />
+      <main>
+        <TransitionProvider
+          location={location}
+          mode='successive'
+          enter={{
+            opacity: 0,
+            transform: "translate3d(0,20vh,0)",
+            config: {
+              mass: 100,
+              tension: 50,
+              friction: 10,
+              duration: 900
+            }
+          }}
+          usual={{
+            opacity: 1,
+            transform: "translate3d(0vh,0vh,0)"
+          }}
+          leave={{
+            opacity: 0,
+            transform: "translate3d(0vh,-20vh, 0)",
+            config: {
+              duration: 700
+            }
+          }}
+        >
+          <TransitionViews>
+            {children}
+          </TransitionViews>
+        </TransitionProvider>
+        <Background />
+      </main>
+    </div>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
