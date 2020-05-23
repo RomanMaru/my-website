@@ -20,6 +20,7 @@
     "gatsby-plugin-transitions": "^2.1.6",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-sharp": "^2.4.3",
+    "gh-pages": "^2.2.0",
     "gsap": "^3.2.6",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",

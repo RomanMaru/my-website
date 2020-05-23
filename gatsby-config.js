@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Roman Maru`,
+    description: `This is my site portflio`,
+    author: `Roman Maru`,
   },
   plugins: [
     {
@@ -17,13 +17,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        name: `Roman Maru`,
+        short_name: `RM`,
+        start_url: `www.romanmaru.com`,
+        background_color: `#0a766b`,
+        theme_color: `#0a766b`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/sunglasses (1).svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,

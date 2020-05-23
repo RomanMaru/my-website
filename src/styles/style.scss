@@ -51,7 +51,8 @@ p {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    height: 150px;
+    height: 170px;
+    z-index: 10;
     svg {
       transform: scale(1.2);
       color: $green;
@@ -66,7 +67,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
+    height: 100%;
     .views {
       height: 100%;
       width: 100%;
@@ -74,6 +75,9 @@ p {
       display: flex;
       align-items: center;
       justify-content: center;
+      .view-container {
+        
+      }
     }
   }
 }
@@ -81,15 +85,16 @@ p {
 //Navigation Menu
 
 header {
+  position: absolute;
   height: 90px;
   width: 100%;
   background: transparent;
-  transition: 0.5s;
+  transition: 0.3s;
   
   &:hover {
     background-color: $white;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
-    transition: 0.7s;
+    transition: 0.3s;
     
   }
 
@@ -131,7 +136,7 @@ header {
             display: inline-block;
             position: absolute;
             border-radius: 50%;
-            bottom: 1%;
+            bottom: -50%;
             left: 50%;
             margin-left: -$size/2;
             transform: scale(0);
@@ -146,27 +151,27 @@ header {
             display: inline-block;
             position: absolute;
             border-radius: 50%;
-            bottom: -50%;
-            left: 50%;
             margin-left: -$size/2;
             transform: scale(1.7);
-            transition: all 0.3s ease-in;
+            transition: all 0.2s ease;
             // @include border-radius(50%);
             // @include scale(0);
             // @include transition(transform .3s cubic-bezier(0.610, 0.000, 0.405, 1.630));
         }
         &.active {
           color: $red;
-          transition: 0.5s ease-in;
+          transition: 0.5s ease;
           &:after {
             opacity: 0;
-            bottom: 50%;
-            transform: scale(0);
+            bottom: 0;
+            color: $red;
+            transform: scale(2);
           }
           &:hover::after {
-            bottom:50%;
+            
             opacity: 0;
-            transform: scale(10);
+            color: $green;
+            transform: scale(0);
           }
         }
       }
@@ -229,97 +234,22 @@ header {
       height: 60px;
       svg {
         margin: 0 auto;
-        color: #0a766b;
+        color: $green;
         transform: scale(1.8);
-        transition: 1.5s ease-out;
+        transition: 0.5s ease-in;
         &:first-child {
           margin-left: 0;
         }
         &:hover {
           color: $red;
           transform: scale(2.5);
-          transition: all 0.7s cubic-bezier(1,.08,.56,1.31); 
+          transition: all 0.4s ease-out; 
         }
       }
     }
   }
 }
 
-@keyframes scale-easeInOutElastic {
-	0% {
-		transform: scale(1);
-	}
-
-	4% {
-		transform: scale(1);
-	}
-
-	8% {
-		transform: scale(1);
-	}
-
-	18% {
-		transform: scale(1.01);
-	}
-
-	20% {
-		transform: scale(1);
-	}
-
-	28% {
-		transform: scale(0.98);
-	}
-
-	30% {
-		transform: scale(0.98);
-	}
-
-	38% {
-		transform: scale(1.09);
-	}
-
-	40% {
-		transform: scale(1.12);
-	}
-
-	60% {
-		transform: scale(-0.12);
-	}
-
-	62% {
-		transform: scale(-0.09);
-	}
-
-	70% {
-		transform: scale(0.02);
-	}
-
-	72% {
-		transform: scale(0.02);
-	}
-
-	80% {
-		transform: scale(0);
-	}
-
-	82% {
-		transform: scale(-0.01);
-	}
-
-	90% {
-		transform: scale(0);
-	}
-
-	92% {
-		transform: scale(0);
-	}
-
-	100% {
-		transform: scale(0);
-	}
-
-}
-//Work
 .work {
   text-align: center;
 }
@@ -332,6 +262,7 @@ header {
   flex-flow: column;
   align-items: center;
   margin-top: 0%;
+  height: 100%;
   h3 {
     margin-top: 0;
     margin-bottom: 1rem;

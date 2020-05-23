@@ -29,7 +29,7 @@ const About = ({ data }) => (
 
 export const query = graphql`
   query {
-    avatar: file(relativePath: { eq: "avatar.jpg" }) {
+    avatar: file(relativePath: { eq: "avatar.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid

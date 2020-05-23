@@ -20,7 +20,9 @@ const Navigation = () => {
     <header>
       <div className="inner-header">
         <div className="logo">
+        <Link to='/'>
           <GiSunglasses />
+        </Link>
         </div>
         <nav ref={el => (menu = el)}>
           <Link to='/' activeClassName="active">home</Link>
