@@ -23,7 +23,7 @@ module.exports = {
         background_color: `#0a766b`,
         theme_color: `#0a766b`,
         display: `minimal-ui`,
-        icon: `src/images/sunglasses (1).svg`, // This path is relative to the root of the site.
+        icon: `src/images/sunglasses.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
