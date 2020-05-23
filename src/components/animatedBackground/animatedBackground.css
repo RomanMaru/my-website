@@ -123,11 +123,11 @@
     transform: translateY(0) rotate(0deg);
     opacity: 1;
   }
-  50% {
+  58% {
     border:3px solid rgba(10, 118, 107, 0.6);
   }
   60% {
-    border:3px solid rgba(172,34,48, 0.8);
+    border:3px solid rgba(172,34,48, 0.6);
   }
   75%{
     opacity: 0;

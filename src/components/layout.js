@@ -4,6 +4,7 @@ import Background from '../components/animatedBackground/animatedBackground'
 import { TransitionProvider, TransitionViews } from 'gatsby-plugin-transitions'
 import { FaGithub, FaFacebook, FaTelegram } from 'react-icons/fa'
 import gsap from 'gsap'
+import {Helmet} from 'react-helmet'
 
 const Layout = ({ location, children }) => {
   let social = useRef(null)
@@ -19,6 +20,9 @@ const Layout = ({ location, children }) => {
 
   return (
     <div className="container">
+    <Helmet>
+        <title>RM</title>
+    </Helmet>
       <div ref={el => (social = el)} className="social">
         <FaGithub />
         <FaFacebook />
