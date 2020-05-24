@@ -302,7 +302,7 @@ header {
           font-weight: 500;
           font-size: 0.8rem;
         }
-        &[type="button"] {
+        &[type="submit"] {
           width: 158px;
           padding-left: 15px;
           background-image: url("../assets/icons/icons_form/plane_icon_green.svg");
@@ -318,7 +318,7 @@ header {
           transition: background-color 0.9s ease;
           margin: auto;
         }
-        &[type="button"]:hover {
+        &[type="submit"]:hover {
           background-color: $green;
           color: $white;
           background-image: url("../assets/icons/icons_form/plane_icon.svg");
