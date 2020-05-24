@@ -9,6 +9,7 @@ const Contact = () => (
       netlify-honeypot="bot-field"
       data-netlify="true">
       <fieldset>
+      <input type="hidden" name="form-name" value="contact-form" />
         <input type="text" placeholder="Your Name" />
         <input type="email" placeholder="Your Email" />
         <textarea placeholder="Your Message" />
