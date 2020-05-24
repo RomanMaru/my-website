@@ -3,8 +3,11 @@ import React from 'react'
 const Contact = () => (
   <div className="contact">
     <h3 className="contact_text">Get in touch</h3>
-    <form method="post" netlify-honeypot="bot-field" data-netlify="true">
-    <input type="hidden" name="bot-field" />
+    <form
+      name="contact-form"
+      method="post"
+      netlify-honeypot="bot-field"
+      data-netlify="true">
       <fieldset>
         <input type="text" placeholder="Your Name" />
         <input type="email" placeholder="Your Email" />
