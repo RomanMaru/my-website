@@ -9,6 +9,7 @@ const Work = () => (
             data-netlify="true">
             <input type="hidden" name="form-name" value="test" />
             <input type="text" />
+            <button role="submit">send</button>
         </form>
     </div>
 )
