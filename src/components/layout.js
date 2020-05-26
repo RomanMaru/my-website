@@ -1,10 +1,11 @@
-import React, {useEffect, useRef} from 'react'
+import React, { useEffect, useRef } from 'react'
 import Navigation from './navigation'
 import Background from '../components/animatedBackground/animatedBackground'
 import { TransitionProvider, TransitionViews } from 'gatsby-plugin-transitions'
-import { FaGithub, FaFacebook, FaTelegram } from 'react-icons/fa'
+import { FaGithub, FaSpotify } from 'react-icons/fa'
+import { TiSocialInstagramCircular } from 'react-icons/ti'
 import gsap from 'gsap'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 const Layout = ({ location, children }) => {
   let social = useRef(null)
@@ -16,17 +17,17 @@ const Layout = ({ location, children }) => {
       x: -50,
       ease: "elastic.out(1, 0.3)"
     })
-  }, [social])
+  }, [])
 
   return (
     <div className="container">
-    <Helmet>
-        <title>RM</title>
-    </Helmet>
+      <Helmet>
+        <title>Roman Maru</title>
+      </Helmet>
       <div ref={el => (social = el)} className="social">
-        <FaGithub />
-        <FaFacebook />
-        <FaTelegram />
+        <a href="https://github.com/RomanMaru" target="_blank"><FaGithub /></a>
+        <a href="https://open.spotify.com/user/i3pj15haqox75a75jhk13hs5r" target="_blank"><FaSpotify /></a>
+        <a href="https://www.instagram.com/roman.maru.siberian/?hl=en" target="_blank"><TiSocialInstagramCircular /></a>
       </div>
       <Navigation />
       <main>
