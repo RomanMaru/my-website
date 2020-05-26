@@ -8,7 +8,7 @@ const Work = () => (
             data-netlify-honeypot="bot-field"
             data-netlify="true">
             <input type="hidden" name="form-name" value="test" />
-            <input type="text" />
+            <input type="text" name="word" />
             <button role="submit">send</button>
         </form>
     </div>
