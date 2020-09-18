@@ -10,6 +10,7 @@ $red: #ac2230;
 $black: #404040;
 $lightgreen: #3dc5b1;
 
+$mobileVersion: 480px;
 html,
 body {
   font-family: $font;
@@ -53,6 +54,7 @@ p {
     justify-content: space-between;
     height: 170px;
     z-index: 10;
+
     a {
       transform: scale(1.2);
       display: block;
@@ -116,7 +118,36 @@ header {
       margin-left: 4%;
       svg {
         color: $green;
-        transform: scale(2.5);
+        height: 2.5em;
+        width: 2.5em;
+      }
+      svg:hover {
+        animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+      }
+      @keyframes shake {
+        10%,
+        90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+
+        20%,
+        80% {
+          transform: translate3d(2px, 0, 0);
+        }
+
+        30%,
+        50%,
+        70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+
+        40%,
+        60% {
+          transform: translate3d(4px, 0, 0);
+        }
       }
     }
     nav {
@@ -215,7 +246,7 @@ header {
   display: flex;
   flex-flow: row;
   margin: 0 auto;
-  width: 700px;
+  width: 800px;
   .avatar {
     display: block;
     border-radius: 50%;
@@ -229,8 +260,9 @@ header {
     }
   }
   .right {
-    width: 70%;
+    width: 80%;
     p {
+      font-size: 16px;
       font-family: $secfont;
     }
     .about_icons {
@@ -247,6 +279,21 @@ header {
         transition: 0.5s ease-in;
         &:first-child {
           margin-left: 0;
+          transform: scale(1.4);
+          &:hover {
+            color: $red;
+            transform: scale(2);
+            transition: all 0.4s ease-out;
+          }
+        }
+        &:nth-child(3) {
+          transform: scale(2);
+        }
+        &:nth-child(6) {
+          transform: scale(1.6);
+        }
+        &:last-child {
+          transform: scale(1.5);
         }
         &:hover {
           color: $red;
@@ -355,4 +402,50 @@ header {
       }
     }
   }
+}
+
+@media (max-width: $mobileVersion) {
+  .social a svg {
+    display: none;
+  }
+  .about .avatar {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin-right: 0;
+  }
+  .about .right {
+    padding: 0 20px;
+    width: 110vw;
+    p {
+      width: 85%;
+    }
+    .about_icons {
+      width: 85%;
+      margin-left: 0;
+    }
+  }
+  .contact {
+
+    form {
+      fieldset {
+        input {
+          width: 230px;
+          &[type="submit"]{
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+            text-align: center;
+            background-position: 80px 20px;
+          }
+        }
+        textarea  {
+          width: 230px;
+        }
+        
+      }
+    }
+  }
+
+
 }

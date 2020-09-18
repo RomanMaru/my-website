@@ -3,11 +3,9 @@ TODO
 . Change URL to name -->
 . Social Icons and nav render before 
 . create "loading component
-. Create animation loading also ask to push f11
 <!-- . Github Icon dont always start hover animation -->
 . Write real Content
 . Redesign skills icons 
-  ^ maybe put on a side of the text column
 ! Make Work Component
 . Scroll Animation
 <!-- . Img blend effect or any -->
@@ -17,4 +15,16 @@ TODO
 . Deploy some apps on gh pages or netify
 <!-- . Go home on sunglasses icon -->
 ? Sound effects on actions
-. Play arround with fonts
+
+!! Mobile Version
+. Home Page
+  <!-- ^ Reduce intesitivy of background -->
+  ^ mobile menu
+  ^ Move to menu 
+  ^ Fix text
+  ^ Position logo
+. About Page
+  <!-- ^ Don't display Avatar - move to menu -->
+  <!-- ^ Increase width of the inputs -->
+  
+

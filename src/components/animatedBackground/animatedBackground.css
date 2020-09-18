@@ -137,3 +137,10 @@
     opacity: 0;
   }
 }
+
+@media (max-width: 480px) {
+  .circles li:nth-child(12), .circles li:nth-child(2), .circles li:nth-child(7), .circles li:nth-child(11), .circles li:nth-child(10)  {
+    display: none;
+  }
+  
+}

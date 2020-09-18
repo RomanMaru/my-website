@@ -34,8 +34,15 @@ module.exports = {
         component: require.resolve(`./src/components/layout.js`),
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `green`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
+  
   ],
 }

@@ -14,7 +14,7 @@ const Navigation = () => {
       y: 50,
       opacity: 0,
     })
-  }, [menu])
+  }, [])
 
   return (
     <header>
