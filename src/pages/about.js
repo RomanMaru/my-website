@@ -13,8 +13,7 @@ const About = ({ data }) => (
         </div>
         <div className="right">
             <h3 >About</h3>
-            <p>Hello, my name is Roman. I'm a Web Developer based in Los Angeles, CA.
-I just love World-Wide-Web. I look forward to all the possibilities of the Web. I started my journey from programming languages such as Java and Ruby (I consider the last one to be the most elegant and beautiful). I'm currently working and studying JavaScript ecosystem that I love a lot. It's so exciting how powerful and universal this language has become. I'm also plannig to dive deep into Three.js, Node.js and animation libraries such as GSAP and Framer Motion. Outside of work I have a beautiful  wife and two addorable cats. I love sports activities, art and music(follow me on Spotify). Shoot me an email and I'll be glad to work with you.  </p>
+            <p>Hello, I'm Roman and I'm a Web Developer based in Los Angeles, CA. I absolutely love World-Wide-Web. Programming for me is a mix of science and art, both of which I'm truly fond of. I started my journey from programming languages like Java and Ruby (I consider the last one to be the most beautiful and elegant ). I'm currently working and studying JavaScript ecosystem that I like a lot. It's exciting how powerful and universal this language has become. I also plan on diving deep into Three.js, Node.js and animation libraries such as GSAP and Framer Motion. Outside of work I have a gorgeous wife and two adorable cats. I love sports activities, art and music(follow me on Spotify). I'm looking forward to gaining new knowledge and experience. Shoot me an email and I'll be glad to work with you.</p>
             <h3>Skills</h3>
             <div className="about_icons">
                 <DiJsBadge />

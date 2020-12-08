@@ -306,7 +306,88 @@ header {
 }
 
 .work {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  height: 800px;
+  align-items: center;
+  .card {
+    width: 230px;
+    height: 276px;
+    margin: 0;
+    padding: 20px;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    h3 {
+      color: $black;
+      font-size: 24px;
+    }
+    hr {
+      // border: 1px solid $black;
+      &.hr1 {
+        margin-bottom: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      &.hr2 {
+        margin-top: 0;
+      }
+    }
+    .project_body {
+      font-size: 14px;
+      overflow: hidden;
+      height: 0px;
+      margin-top: 0;
+      margin-bottom: 0;
+      transition: height 0.4s ease-out;
+    }
+    .project_icons {
+      margin: 0 auto;
+      width: 120px;
+      display: flex;
+      justify-content: space-between;
+      svg {
+        color: $red;
+        height: 1.5em;
+        width: 1.5em;
+      }
+    }
+    .project_stack {
+      ul {
+        margin-top: 20px;
+        margin-bottom: 0;
+        li {
+          color: #444444;
+          font-size: 18px;
+          &::marker {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    transition: all 0.5s ease-in-out;
+  }
+  .card:hover {
+    height: 444px;
+    background-color: $white;
+    border-color: $green;
+    border-width: 2px;
+    .project_body {
+      height: 168px;
+      transition: height 0.3s ease-in;
+      transition-delay: 0.2s;
+    }
+    hr {
+      &.hr1 {
+        margin-bottom: 12px;
+        opacity: 1;
+        transition: opacity 0.4s ease;
+      }
+      &.hr2 {
+        margin-top: 12px;
+      }
+    }
+    transition: all 0.2s ease-in-out;
+  }
 }
 
 //Contact
@@ -426,12 +507,11 @@ header {
     }
   }
   .contact {
-
     form {
       fieldset {
         input {
           width: 230px;
-          &[type="submit"]{
+          &[type="submit"] {
             margin-left: 0;
             margin-right: 0;
             width: 100%;
@@ -439,13 +519,10 @@ header {
             background-position: 80px 20px;
           }
         }
-        textarea  {
+        textarea {
           width: 230px;
         }
-        
       }
     }
   }
-
-
 }

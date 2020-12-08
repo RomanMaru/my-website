@@ -4,15 +4,15 @@ TODO
 . Social Icons and nav render before 
 . create "loading component
 <!-- . Github Icon dont always start hover animation -->
-. Write real Content
-. Redesign skills icons 
-! Make Work Component
+<!-- . Write real Content -->
+<!-- . Redesign skills icons  -->
+<!-- ! Make Work Component -->
 . Scroll Animation
 <!-- . Img blend effect or any -->
 . Recieving email from form
   ^ added netify notifications, doesn't work
 <!-- . And working solcial icons -->
-. Deploy some apps on gh pages or netify
+<!-- . Deploy some apps on gh pages or netify -->
 <!-- . Go home on sunglasses icon -->
 ? Sound effects on actions
 
